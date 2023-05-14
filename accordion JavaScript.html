@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="modul.js">
+    <link rel="stylesheet" href="modul.css">
+
+</head>
+
+<body>
+    <div class="accordion">
+        <div class="accordion-header">
+            RENA
+            <i class="">
+                <details>
+                    <summary></summary>
+                </details>
+            </i>
+        </div>
+        <div class="accordion-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eius pariatur. Voluptatibus neque
+                distinctio odit, asperiores saepe ut, est quam rem earum beatae, aliquam accusamus tempora cupiditate
+                corrupti. Veritatis, sed.</p>
+        </div>
+
+        <div class="accordion-header">
+            RENA
+            <i class="">
+                <details>
+                    <summary></summary>
+                </details>
+            </i>
+        </div>
+        <div class="accordion-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ipsum quasi ut minus, cum molestiae iusto
+                voluptatibus, eaque labore voluptates at magnam sed nulla omnis tenetur incidunt! Veniam, dolore
+                corporis!</p>
+        </div>
+
+        <div class="accordion-header">
+            RENA
+            <i class="">
+                <details>
+                    <summary></summary>
+                </details>
+            </i>
+        </div>
+        <div class="accordion-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, iste iure voluptatem harum facere
+                totam autem inventore doloremque saepe est eveniet. Est placeat delectus vero dolores dignissimos
+                voluptatibus, suscipit pariatur!</p>
+        </div>
+
+    </div>
+
+
+    <script>
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                // toggle active class on header
+                header.classList.toggle('active');
+
+                // toggle display of content
+                const content = header.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+
+    </script>
+    <style>
+        .accordion-header {
+            background-color: #eee;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            border: 1px solid #eee;
+            background-color: rgb(82, 115, 75);
+        }
+
+        .accordion-header i {
+            margin-left: auto;
+            transition: transform 0.2s;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 10px;
+        }
+
+        .accordion {
+            width: 800px;
+            margin: auto;
+            margin-top: 100px;
+            background-color: rgb(250, 243, 235);
+        }
+
+        .A {
+            width: 800px;
+        }
+    </style>

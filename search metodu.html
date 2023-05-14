@@ -1,0 +1,123 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="modul.js">
+    <link rel="stylesheet" href="modul.css"> 
+    <html>
+     <style>
+         table {
+             border-collapse: collapse;
+             width: 100%;
+             max-width: 800px;
+             margin: 20px auto;
+         }
+         th, td {
+             padding: 10px;
+             border: 1px solid black;
+             text-align: left;
+         }
+         input[type="text"] {
+             padding: 5px;
+             margin-bottom: 10px;
+             width: 100%;
+             max-width: 300px;
+             box-sizing: border-box;
+         }
+     </style>
+
+ </head>
+ <body>
+     <input type="text" id="filter" placeholder="Search...">
+     <table id="table">
+         <thead>
+             <tr>
+                 <th>Ad</th>
+                 <th>soyad</th>
+                 <th>qrup</th>
+                 <th>ortalama bal</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td>Rena</td>
+                 <td>Umudova</td>
+                 <td>695.22</td>
+                 <td>76</td>
+             </tr>
+             <tr>
+                 <td>Fidan</td>
+                 <td>Veliyeva</td>
+                 <td>695.22</td>
+                 <td>97</td>
+             </tr>
+             <tr>
+                 <td>Yaqub</td>
+                 <td>Senanov</td>
+                 <td>697.22</td>
+                 <td>78</td>
+             </tr>
+             <tr>
+                 <td>Huseyn</td>
+                 <td>Eliyev</td>
+                 <td>697.22</td>
+                 <td>90</td>
+             </tr>
+             <tr>
+                <td>Gullu</td>
+                <td>Memmedova</td>
+                <td>693.22</td>
+                <td>59</td>
+            </tr> 
+             <tr>
+                <td>Nilay</td>
+                <td>Menefli</td>
+                <td>691.22</td>
+                <td>87</td>
+            </tr> 
+            <tr>
+                <td>Sevda</td>
+                <td>Hesenli</td>
+                <td>693.22</td>
+                <td>76</td>
+            </tr> 
+            <tr>
+                <td>Aylin</td>
+                <td>Ismayilzade</td>
+                <td>691.22</td>
+                <td>82</td>
+            </tr>
+         </tbody>
+     </table>
+     
+     <script>
+         var table = document.getElementById('table');
+         var filter = document.getElementById('filter');
+         filter.addEventListener('input', function() {
+             var value = filter.value.toLowerCase();
+             var rows = table.getElementsByTagName('tr');
+             for (var i = 1; i < rows.length; i++) {
+                 var row = rows[i];
+                 var cells = row.getElementsByTagName('td');
+                 var match = false;
+                 for (var j = 0; j < cells.length; j++) {
+                     var cell = cells[j];
+                     if (cell.textContent.toLowerCase().indexOf(value) > -1) {
+                         match = true;
+                         break;
+                     }
+                 }
+                 if (match) {
+                     row.style.display = '';
+                 } else {
+                     row.style.display = 'none';
+                 }
+             }
+         });
+     </script>
+ </body>
+ </html>

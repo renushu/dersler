@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // tasklarrrr
+// 1.1
+// let toplam = 0
+// for (let i = 1; i <= 10; i++) {
+//   toplam += i;
+// }
+// console.log(toplam)
+
+// //1.2
+// let hasil = 1
+// for (let i = 1; i <= 10; i++) {
+//   hasil *= i;
+// }
+// console.log(hasil)
+
+// //2.1
+// let cem = 0;
+// for (let i = 0; i <= 100; i += 2) {
+//   cem += i;
+// }
+// console.log(cem)
+
+// //2.2
+// let hasil = 1;
+// for (let i = 2; i <= 100; i += 2) {
+//   hasil *= i;
+// }
+// console.log(hasil)
+
+// //3
+// let cem = 0;
+// let eded = 0;
+// for (let i = 100; i <= 999; i++) {
+//   cem += i;
+//   eded++;
+// }
+// const orta = cem / eded;
+// console.log(orta)
+
+// //4
+// for (let i = 100; i <= 999; i++) {
+//   if (i % 7 === 0 || i % 8 === 0) {
+//     console.log(i);
+//   }
+// }
+
+// //5
+// let cem= 0
+// for (let i = 100; i <= 999; i++) {
+//   if (i % 7 === 0 && i % 8 === 0) {
+//     cem += i;
+//   }
+// }
+// console.log(cem)
+
+// //6
+// for (let i = 100; i <= 999; i++) {
+//   if (i % 7 === 0 || i % 8 === 0) {
+//     console.log(i);
+//     break;
+//   }
+// }
+
+// //7
+// for(let i=1;i<=100;i++){
+//   if(i===1){
+//     console.log("1 ne sadedir, nede murekkeb!")
+//   }
+//   else if(i===2){
+//     console.log(`${i} sadedir`)
+//   }
+//   else{
+//     let k=0
+//     for(let j=1; j<=i;j++){
+//       if(i%j==0){
+//         k++
+//       }
+//     }
+//     if(k>2){
+//       console.log(`${i} murekkebdir`)
+//     }
+//     else{
+//       console.log(`${i} sadedir`)
+//     }
+//   }
+// }
+
+// //8
+// let massiv = [5,4,3]
+// console.log(massiv.sort(function(num1,num2){
+//   return num1-num2
+// }))
+// console.log(`Minumum : ${massiv[0]}, Maximum: ${massiv[massiv.length-1]}`)
+
+// //9.1
+// const arr = [1, 2, 3, 4, 5]
+// let cem= 0
+// for (let i = 0; i < arr.length; i++) {
+//   toplam += arr[i];
+// }
+// console.log(toplam)
+// //9.2
+// const arr = [1, 2, 3, 4, 5];
+// let hasil = 1;
+// for (let i = 0; i < arr.length; i++) {
+//   hasil *= arr[i];
+// }
+// console.log(hasil)
+
+// //10
+// const arr = [1, 2, 3, 2, 4, 3, 5];
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = i + 1; j < arr.length; j++) {
+//     if (arr[i] === arr[j]) {
+//       arr.splice(j, 1);
+//       j--;
+//     }
+//   }
+// }
+// console.log(arr)
+
+// //11
+// const arr = [1, 2, 'a', 'b', 3, 'c'];
+// const newArr = arr.filter((item) => typeof item === 'number');
+// console.log(newArr)
+
+// //12
+// const soz = 'salam';
+// function tersCevir(soz) {
+//   return soz.split('').reverse().join('');
+// }
+// const tersSoz = tersCevir(soz);
+// console.log(tersSoz);
+
+// //13
+// const cumle = 'Salam dünya!';
+// function tersCevir(cumle) {
+//   return cumle.split(' ').reverse().join(' ');
+// }
+// const tersCumle = tersCevir(cumle);
+// console.log(tersCumle)
+
+// //14
+// function sayiToSoz(say) {
+//   const birler = ['', 'bir', 'iki', 'üç', 'dört', 'beş', 'altı', 'yeddi', 'sekkiz', 'doqquz'];
+//   const onlar = ['', 'on', 'yirmi', 'otuz', 'qirx', 'elli', 'altmış', 'yetmiş', 'seksen', 'doxsan'];
+//   let soz = '';
+
+//   if (say === 0) {
+//     return 'sıfır';
+//   }
+
+//   if (say >= 1000) {
+//     soz += sayiToSoz(Math.floor(sayi / 1000)) + ' bin ';
+//     say %= 1000;
+//   }
+
+//   if (say>= 100) {
+//     soz += birler[Math.floor(sayi / 100)] + ' yüz ';
+//     say %= 100;
+//   }
+
+//   if (sayi >= 10) {
+//     soz += onlar[Math.floor(sayi / 10)] + ' ';
+//     say %= 10;
+//   }
+
+//   if (say > 0) {
+//     soz += birler[sayi] + ' ';
+//   }
+
+//   return soz.trim();
+// }
+
+//15
+// function bolunen(sayi) {
+//   let netice = [];
+
+//   for (let i = 100; i <= 999; i++) {
+//     if (i % sayi === 0) {
+//       netice.push(i);
+//     }
+//   }
+
+//   return netice;
+// }
+// console.log(bolunen(7))
+
+//16
+// function tameded(say) {
+//   if (Number.isInteger(say)) {
+//     console.log(say + " tam ededdir.");
+//   } else {
+//     console.log(say + " tam eded deyil.");
+//   }
+// }
+// console.log(tameded(10))
+
+//17
+// function sozSayi(cumle) {
+//   let sozler = cumle.split(" ");
+//   console.log("soz sayi " + sozler.length);
+// }
+// console.log("soz sayi " + sozler.length);
+
+
+//18
+// function bosluglariSil(cumle) {
+//   return cumle.replace(/\s+/g, "");
+// }
+// console.log(bosluglariSil("Salam salam salam salam salam salam"))
+
+//19
+// let rena = prompt("Cumleni daxil edin:")
+// rena = rena.split("")
+// rena[0]=rena[0].toUpperCase()
+// rena = rena.toString()
+// for(let i=0; i<rena.length;i++){
+//   rena = rena.replace("," ,"")
+// }
+// console.log(rena)
+
+// //20
+// let arr1 = [1,2,3,4,6]
+// let arr2 = [1,2,3,4,5]
+// if(arr1===arr2){
+//   console.log(true)
+// }
+// else{
+//   console.log(false)
+// }
+
+// //21
+// let arr = [3,2,5,6,1,4]
+// console.log(`artma : ${arr.sort(function(a,b){
+//   return a-b
+// })}
+// azalma : ${arr.sort(function(a,b){
+//   return b-a
+// })}`)
+
+// //22
+// let tarix1 = prompt("Intervalin il tarixi:")
+// let tarix2 = prompt("Intervalin son tarixi:")
+// let intevaldaki_tarixler = []
+// function interval(){
+//   for(let i = parseInt(tarix1); i<=parseInt(tarix2);i++){
+//     intevaldaki_tarixler.push(i)
+//   }
+//   return intevaldaki_tarixler
+// }
+// alert(`Intervaldaki tarixler:
+// ${interval()}`)
+
+// //23
+// let tarix1 = prompt("Intervalin il tarixi:")
+// let tarix2 = prompt("Intervalin son tarixi:")
+// alert(`Intervaldaki gunler:
+// ${(parseInt(tarix2)-parseInt(tarix1))*365}`)
+
+// //24
+// let eded = prompt("Ededi daxil et:")
+// function funksiya(){
+//   for(let i=0; i<=Math.floor(parseInt(eded)/2);i++){
+//     for(let j=0; j<=parseInt(eded); j++){
+//       if(i+j==parseInt(eded)){
+//         console.log( `${i} + ${j} = ${parseInt(eded)}`)
+//       }
+//     }
+//   }
+// }
+// funksiya()
+
+// //25
+// let telebeler = {
+//   "Eli": {
+//     "bal": 85,
+//   },
+//   "Aise": {
+//     "bal": 70,
+//   },
+//   "Nemet": {
+//     "bal": 55,
+//   },
+//   "Sevda": {
+//     "bal": 90,
+//   }
+// };
+// for (let telebe in telebeler) {
+//   if (telebeler[telebe]["bal"] < 60) {
+//     delete telebeler[telebe];
+//   }
+// }
+// console.log(telebeler);
+
+
+// //26
+// let cumle = prompt("Cumleni daxil et:")
+// cumle= cumle.split(" ")
+// let k=0
+// let soz = []
+// for(let i=0; i<cumle.length;i++){
+//   for(let t=0; t<soz.length;t++){
+//     if(soz[t].split(" ")[0]==cumle[i]){
+//       i++
+//     }  
+//   }
+//   for(let j=0; j<cumle.length;j++){
+//     if(cumle[i]==cumle[j]){
+//       k++
+//     }
+//   }
+//   soz.push(`${cumle[i]} - ${k} defe tekrarlanib`)
+//   k=0
+// }
+// console.log(soz)
+
+
+// //27
+
+// let metn1= prompt("Birinci metni daxil et:")
+// let metn2 = prompt("Ikinci metni daxil et:")
+// metn1 = metn1.split(" ")
+// metn2 = metn2.split(" ")
+// let k = 0
+// if(metn1.length>metn2.length){
+//   for(let i=0; i<metn1.length;i++){
+//     for(j=0;j<metn2.length;j++){
+//       if(metn1[i]==metn2[j]){
+//         k++
+//         if(k===3){
+//           console.log("oxsar metindir!")
+//           break
+//         }
+//       }
+//     }
+//     if(k!=3){
+//       k=0
+//     }
+//   }
+//   if(k!=3){
+//     console.log("Oxsar metin deyil!")
+//   }
+// }
+// else{
+//   for(let i=0; i<metn2.length;i++){
+//     for(j=0;j<metn1.length;j++){
+//       if(metn1[j]==metn2[i]){
+//         k++
+//         if(k==3){
+//           console.log("oxsar metindir!")
+//           break
+//         }
+//       }
+//     }
+//     if(k!=3){
+//       k=0
+//     }
+//   }
+//   if(k!=3){
+//     console.log("Oxsar metin deyil!")
+//   }
+// }
+
+// //28
+// let obyekt = [{
+//   ad : "Eli",
+//   soyad : "Eliyev",
+//   bir_saatliq_emekhaqqi : 15,
+//   heftelik_islediyi_saat : 40
+// },
+// {
+//   ad : "Fidan",
+//   soyad : "Eliyeva",
+//   bir_saatliq_emekhaqqi : 20,
+//   heftelik_islediyi_saat : 45
+// },
+// {
+//   ad : "Rena",
+//   soyad : "Umudova",
+//   bir_saatliq_emekhaqqi : 20,
+//   heftelik_islediyi_saat : 50
+// }]
+// let obyekt2 = []
+// function ayliq_maas(){
+//   for(let i=0; i<obyekt.length ; i++){
+//     if(obyekt[i].heftelik_islediyi_saat<=40){
+//       obyekt2.push({ad : obyekt[i].ad,
+//         soyad : obyekt[i].soyad,
+//         ayliq_qazanc : obyekt[i].bir_saatliq_emekhaqqi*obyekt[i].heftelik_islediyi_saat*4})
+//     }
+//     else{
+//       obyekt2.push({
+//         ad : obyekt[i].ad,
+//         soyad : obyekt[i].soyad,
+//         ayliq_qazanc : obyekt[i].bir_saatliq_emekhaqqi*obyekt[i].heftelik_islediyi_saat*4*2})
+//     }
+//   }
+//   return obyekt2
+// }
+// console.log(ayliq_maas())
+
+// //29
+// let metn = prompt("Cumleni daxil et").toLocaleLowerCase()
+// metn= metn.split(" ")
+// for(let i=0; i<metn.length;i++){
+//   if(metn[i]=="adna"){
+//     metn[i] = "ADNSU"
+//   }
+// }
+// metn= metn.toString()
+// for(let i=0; i<metn.length;i++){
+//   metn = metn.replace(","," ")
+// }
+// console.log(metn)
+
+// //30
+// let eded = parseInt(prompt("Ededi daxil et:(calis 2 reqemle ve ya ustu olsun)"))
+// let sum = 0
+// while(eded>0){
+//   sum = sum + (eded%10)
+//   eded = Math.floor(eded/10)
+// }
+// console.log(sum)
+
+
+    </script>
+</body>
+</html>

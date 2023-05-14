@@ -1,0 +1,254 @@
+<ul id="ixtisas">
+    <li class="A">SECURITY</li>
+    <li class="A">IT</li>
+    <li class="A">KM</li>
+</ul>
+<ul id="qrup">
+
+</ul>
+<table border="1" width="50%">
+    <thead>
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Yash</th>
+        </tr>
+    </thead>
+    <tbody id="body"></tbody>
+</table>
+
+<script>
+    let telebe = [
+        {
+            name: "Rena",
+            surname: "Umudova",
+            age: 18,
+            group: 695,
+            ixtisas: "Security"
+        },
+        {
+            name: "Fidan",
+            surname: "Veliyeva",
+            age: 18,
+            group: 695,
+            ixtisas: "Security"
+        },
+        {
+            name: "Zehra",
+            surname: "Bagirova",
+            age: 18,
+            group: 691,
+            ixtisas: "Security"
+        },
+        {
+            name: "Fatime",
+            surname: "Musayeva",
+            age: 18,
+            group: 693,
+            ixtisas: "Security"
+        },
+        {
+            name: "Fidan",
+            surname: "Quliyeva",
+            age: 18,
+            group: 697,
+            ixtisas: "Security"
+        },
+        {
+            name: "Samir",
+            surname: "Nezerov",
+            age: 18,
+            group: 697,
+            ixtisas: "Security"
+        },
+        {
+            name: "Elvin ",
+            surname: "Kerimov",
+            age: 18,
+            group: 591,
+            ixtisas: "IT"
+        },
+        {
+            name: "Teymur",
+            surname: "Novruzov",
+            age: 18,
+            group: 593,
+            ixtisas: "IT"
+        },
+        {
+            name: "Elmira",
+            surname: "Eliyeva",
+            age: 18,
+            group: 595,
+            ixtisas: "IT"
+        },
+        {
+            name: "Lamiye",
+            surname: "Memmedli",
+            age: 18,
+            group: 597,
+            ixtisas: "IT"
+        },
+        {
+            name: "Sehane",
+            surname: "Memmedli",
+            age: 18,
+            group: 491,
+            ixtisas: "KM"
+        },
+        {
+            name: "Fidan",
+            surname: "Qasimzade",
+            age: 18,
+            group: 493,
+            ixtisas: "KM"
+        },
+        {
+            name: "Senan",
+            surname: "Tagizade",
+            age: 18,
+            group: 495,
+            ixtisas: "KM"
+        }, {
+            name: "Alime",
+            surname: "Ismayilzade",
+            age: 18,
+            group: 497,
+            ixtisas: "KM"
+        }, {
+            name: "Vasif",
+            surname: "Kerimov",
+            age: 18,
+            group: 693,
+            ixtisas: "Security"
+        }, {
+            name: "Sevda",
+            surname: "Umudova",
+            age: 18,
+            group: 593,
+            ixtisas: "IT"
+        }, {
+            name: "Eli",
+            surname: "Memmedov",
+            age: 18,
+            group: 691,
+            ixtisas: "Security"
+        },
+        {
+            name: "Veli",
+            surname: "Eliyev",
+            age: 18,
+            group: 697,
+            ixtisas: "Security"
+        },
+        {
+            name: "Cefer",
+            surname: "Talibov",
+            age: 18,
+            group: 591,
+            ixtisas: "IT"
+        },
+        {
+            name: "Yasemen",
+            surname: "Memmedova",
+            age: 18,
+            group: 597,
+            ixtisas: "IT"
+        },
+
+    ]
+    let faculty = [
+        {
+            ixtisas: "SECURITY",
+            group: 691
+        },
+        {
+            ixtisas: "SECURITY",
+            group: 693
+        },
+        {
+            ixtisas: "SECURITY",
+            group: 695
+        },
+        {
+            ixtisas: "SECURITY",
+            group: 697
+        },
+        {
+            ixtisas: "IT",
+            group: 591
+        },
+        {
+            ixtisas: "IT",
+            group: 593
+        },
+        {
+            ixtisas: "IT",
+            group: 595
+        },
+        {
+            ixtisas: "IT",
+            group: 597
+        },
+        {
+            ixtisas: "KM",
+            group: 491
+        },
+        {
+            ixtisas: "KM",
+            group: 493
+        },
+        {
+            ixtisas: "KM",
+            group: 495
+        },
+        {
+            ixtisas: "KM",
+            group: 497
+        },
+    ]
+    let filterData;
+    dataixtisas(faculty)
+
+    function dataixtisas(faculty) {
+        qrup.innerHTML = ""
+        faculty.forEach(element => {
+            qrup.innerHTML += `<li class="qrup">${element.group}</li>`
+            qrup.innerHTML.ixtisas
+        });
+    }
+
+    data(telebe)
+    function data(arr) {
+        body.innerHTML = ""
+        arr.forEach(element => {
+            body.innerHTML += ` <tr>
+                <th>${element.name}</th>
+                <th>${element.surname}</th>
+                <th>${element.age}</th>
+                </tr>`
+        })
+    }
+    let  filterData1;
+    document.querySelectorAll(".ixtisas").forEach(item=>{
+        item.addEventListener("click",function(){
+            filterData=faculty.filter(x=>x.ixtisas==this.innerText)
+            dataixtisas(filterData)
+            document.querySelectorAll(".qrup").forEach(item=>{
+                item.addEventListener("click",function(){
+                    filterData1=telebe.filter(x=>x.group==this.innerText)
+                    console.log(filterData1);
+                    data(filterData1)
+                })
+            })
+        })
+    })
+
+</script>
+
+
+
+
+</body>
+
+</html>
